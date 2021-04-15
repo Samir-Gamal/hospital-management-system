@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\DashboardController;
+use App\Http\Controllers\Dashboard\DoctorController;
 use App\Http\Controllers\Dashboard\SectionController;
 use Illuminate\Support\Facades\Route;
 
@@ -52,6 +53,13 @@ Route::group(
         Route::resource('Sections', SectionController::class);
 
         //############################# end sections route ######################################
+
+
+        //############################# Doctors route ##########################################
+
+        Route::resource('Doctors', DoctorController::class);
+
+        //############################# end Doctors route ######################################
 
 
     });
