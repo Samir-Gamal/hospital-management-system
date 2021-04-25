@@ -1,6 +1,7 @@
 <?php
 
 return [
+
    'add_sections'=>'Add Sections',
    'name_sections'=>'Name Sections',
     'edit_sections'=>'Edit Sections',
