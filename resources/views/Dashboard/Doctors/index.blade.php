@@ -45,6 +45,7 @@
                             <thead>
                             <tr>
                                 <th>#</th>
+                                <th>{{trans('doctors.img')}}</th>
                                 <th >{{trans('doctors.name')}}</th>
                                 <th >{{trans('doctors.email')}}</th>
                                 <th>{{trans('doctors.section')}}</th>
@@ -60,6 +61,13 @@
                           @foreach($doctors as $doctor)
                               <tr>
                                   <td>{{ $loop->iteration }}</td>
+                                  <td>
+                                      @if($doctor->image)
+                                          <img src="{{Url::asset('Dashboard/img/doctors/'.$doctor->image->filename)}}" height="50px" width="50px" alt="">
+                                      @else
+                                          <img src="{{Url::asset('Dashboard/img/doctor_default.png')}}" height="50px" width="50px" alt="">
+                                      @endif
+                                  </td>
                                   <td>{{ $doctor->name }}</td>
                                   <td>{{ $doctor->email }}</td>
                                   <td>{{ $doctor->section->name}}</td>

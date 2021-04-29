@@ -54,8 +54,8 @@ class DoctorController extends Controller
     }
 
 
-    public function destroy($id)
+    public function destroy(Request $request)
     {
-        //
+        return $this->Doctors->destroy($request);
     }
 }
