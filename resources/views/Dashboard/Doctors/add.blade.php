@@ -40,7 +40,7 @@
                                         {{trans('doctors.name')}}</label>
                                 </div>
                                 <div class="col-md-11 mg-t-5 mg-md-t-0">
-                                    <input class="form-control" name="name" type="text">
+                                    <input class="form-control" name="name" autofocus type="text">
                                 </div>
                             </div>
 
@@ -105,17 +105,6 @@
                                             <option value="{{$appointment->name}}">{{$appointment->name}}</option>
                                         @endforeach
                                     </select>
-                                </div>
-                            </div>
-
-                            <div class="row row-xs align-items-center mg-b-20">
-                                <div class="col-md-1">
-                                    <label for="exampleInputEmail1">
-                                        {{trans('doctors.price')}}</label>
-                                </div>
-
-                                <div class="col-md-11 mg-t-5 mg-md-t-0">
-                                    <input class="form-control" name="price" value="0.00" type="text">
                                 </div>
                             </div>
 

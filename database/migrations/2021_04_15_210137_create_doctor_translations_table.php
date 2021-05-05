@@ -17,7 +17,6 @@ class CreateDoctorTranslationsTable extends Migration
             $table->id();
             $table->string('locale')->index();
             $table->string('name');
-            $table->string('appointments');
             $table->unique(['doctor_id','locale']);
             $table->foreignId('doctor_id')->references('id')->on('doctors')->onDelete('cascade');
         });

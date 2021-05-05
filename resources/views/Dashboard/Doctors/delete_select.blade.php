@@ -15,10 +15,6 @@
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <h5>{{trans('sections_trans.Warning')}}</h5>
-                    <input type="hidden" value="2" name="page_id">
-                    @if($doctor->image)
-                        <input type="text" name="filename" value="{{$doctor->image->filename}}">
-                    @endif
                     <input type="hidden" id="delete_select_id" name="delete_select_id" value=''>
                 </div>
                 <div class="modal-footer">

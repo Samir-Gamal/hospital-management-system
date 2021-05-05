@@ -20,7 +20,6 @@ class CreateDoctorsTable extends Migration
             $table->string('password');
             $table->foreignId('section_id')->references('id')->on('sections')->onDelete('cascade');
             $table->string('phone');
-            $table->decimal('price',8,2);
             $table->boolean('status')->default(1);
             $table->timestamps();
         });

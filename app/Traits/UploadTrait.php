@@ -22,7 +22,6 @@ trait UploadTrait{
             $name = \Str::slug($request->input('name'));
             $filename = $name. '.' . $photo->getClientOriginalExtension();
 
-
             // insert Image
             $Image = new Image();
             $Image->filename = $filename;
@@ -30,18 +29,16 @@ trait UploadTrait{
             $Image->imageable_type = $imageable_type;
             $Image->save();
             return $request->file($inputname)->storeAs($foldername, $filename, $disk);
-
         }
 
         return null;
 
     }
 
-
     public function Delete_attachment($disk,$path,$id,$filename){
 
         Storage::disk($disk)->delete($path);
-        image::where('id',$id)->where('filename',$filename)->delete();
+        image::where('imageable_id',$id)->delete();
 
     }
 
