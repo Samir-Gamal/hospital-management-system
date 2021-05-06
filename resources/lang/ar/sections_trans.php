@@ -10,5 +10,6 @@ return array (
   'description' => 'الوصف',
   'edit_sections' => 'تعديل قسم',
   'name_sections' => 'اسم القسم',
+  'section_doctors' => 'اطباء القسم',
   'submit' => 'تاكيد',
 );

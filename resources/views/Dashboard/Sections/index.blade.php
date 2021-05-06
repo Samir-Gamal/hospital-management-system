@@ -54,7 +54,7 @@
                                            @foreach($sections as $section)
                                                <tr>
                                                    <td>{{$loop->iteration}}</td>
-                                                   <td>{{$section->name}}</td>
+                                                   <td><a href="{{route('Sections.show',$section->id)}}">{{$section->name}}</a> </td>
                                                    <td>{{ \Str::limit($section->description, 50) }}</td>
                                                    <td>{{ $section->created_at->diffForHumans() }}</td>
                                                    <td>

@@ -14,4 +14,10 @@ class Section extends Model
     // 3. To define which attributes needs to be translated
     public $translatedAttributes = ['name','description'];
     use HasFactory;
+
+
+    public function doctors()
+    {
+        return $this->hasMany(Doctor::class);
+    }
 }

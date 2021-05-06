@@ -14,7 +14,7 @@
                 {{ method_field('delete') }}
                 {{ csrf_field() }}
                 <div class="modal-body">
-                    <h5>{{trans('sections_trans.Warning')}}</h5>
+                    <h5>{{trans('sections_trans.Warning')}} {{$doctor->name}}</h5>
                     <input type="hidden" value="1" name="page_id">
                     @if($doctor->image)
                         <input type="hidden" name="filename" value="{{$doctor->image->filename}}">

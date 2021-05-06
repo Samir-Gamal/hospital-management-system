@@ -7,8 +7,9 @@ return array (
   'add_sections' => 'Add Sections',
   'created_at' => 'Created_at',
   'delete_sections' => 'Delete Sections',
-  'description' => 'description',
+  'description' => 'Description',
   'edit_sections' => 'Edit Sections',
   'name_sections' => 'Name Sections',
+  'section_doctors' => 'Section Doctors',
   'submit' => 'Submit',
 );
