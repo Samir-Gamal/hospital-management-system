@@ -42,10 +42,13 @@ class DoctorRepository implements DoctorRepositoryInterface
             $doctors->phone = $request->phone;
             $doctors->status = 1;
             $doctors->save();
+
             // store trans
             $doctors->name = $request->name;
-            $doctors->appointments =implode(",",$request->appointments);
             $doctors->save();
+
+            // insert pivot tABLE
+            $doctors->doctorappointments()->attach($request->appointments);
 
 
             //Upload img

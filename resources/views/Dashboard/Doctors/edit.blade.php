@@ -117,13 +117,14 @@
 
                                 <div class="col-md-11 mg-t-5 mg-md-t-0">
                                     <select multiple="multiple" class="testselect2" name="appointments[]">
-                                        @foreach($doctor->doctorappointments as $appointmentDOC)
-                                            <option value="{{$appointmentDOC->id}}" selected>{{$appointmentDOC->name}}</option>
-                                        @endforeach
-
                                         @foreach($appointments as $appointment)
-                                            <option
-                                                value="{{$appointment->id}}">{{$appointment->name}}</option>
+                                            @php $check = []; @endphp
+                                            @foreach ($doctor->doctorappointments as $key => $appointmentDOC)
+                                                @php
+                                                    $check[] = $appointmentDOC->id;
+                                                @endphp
+                                            @endforeach
+                                            <option value="{{$appointment->id}}" {{ in_array($appointment->id, $check) ? 'selected' : '' }}>{{$appointment->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
