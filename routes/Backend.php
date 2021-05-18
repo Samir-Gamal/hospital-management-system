@@ -49,14 +49,14 @@ Route::group(
 
     Route::middleware(['auth:admin'])->group(function () {
 
-        //############################# sections route ##########################################
+    //############################# sections route ##########################################
 
         Route::resource('Sections', SectionController::class);
 
-        //############################# end sections route ######################################
+    //############################# end sections route ######################################
 
 
-        //############################# Doctors route ##########################################
+     //############################# Doctors route ##########################################
 
         Route::resource('Doctors', DoctorController::class);
         Route::post('update_password', [DoctorController::class, 'update_password'])->name('update_password');
@@ -70,6 +70,12 @@ Route::group(
         Route::resource('Service', SingleServiceController::class);
 
         //############################# end sections route ######################################
+
+        //############################# GroupServices route ##########################################
+
+        Route::view('Add_GroupServices','livewire.GroupServices.include_create')->name('Add_GroupServices');
+
+        //############################# end GroupServices route ######################################
 
 
 

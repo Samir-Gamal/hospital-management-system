@@ -111,6 +111,7 @@
       <path value="$PROJECT_DIR$/vendor/astrotomic/laravel-translatable" />
       <path value="$PROJECT_DIR$/vendor/laravel/breeze" />
       <path value="$PROJECT_DIR$/vendor/joedixon/laravel-translation" />
+      <path value="$PROJECT_DIR$/vendor/livewire/livewire" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3">

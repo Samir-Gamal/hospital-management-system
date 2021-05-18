@@ -118,6 +118,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/astrotomic/laravel-translatable" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/breeze" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/joedixon/laravel-translation" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/livewire/livewire" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
