@@ -1,5 +1,6 @@
 @extends('Dashboard.layouts.master')
 @section('css')
+  
 @endsection
 @section('title')
     مجموعة خدمات
@@ -35,4 +36,5 @@
     <!-- main-content closed -->
 @endsection
 @section('js')
+
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Livewire;
 use App\Models\Group;
 use App\Models\Service;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 use Livewire\Component;
 
 class CreateGroupServices extends Component
@@ -16,10 +17,10 @@ class CreateGroupServices extends Component
     public $name_group;
     public $notes;
     public $ServiceSaved = false;
-    public $show_table =true;
+    public $ServiceUpdated = false;
+    public $show_table = true;
     public $updateMode = false;
     public $group_id;
-    public $ServiceUpdated =false;
 
     public function mount()
     {
@@ -37,7 +38,7 @@ class CreateGroupServices extends Component
         }
 
         return view('livewire.GroupServices.create-group-services', [
-            'groups'=> Group::all(),
+            'groups'=>Group::all(),
             'subtotal' => $Total_after_discount = $total - ((is_numeric($this->discount_value) ? $this->discount_value : 0)),
             'total' => $Total_after_discount * (1 + (is_numeric($this->taxes) ? $this->taxes : 0) / 100)
         ]);
@@ -96,8 +97,8 @@ class CreateGroupServices extends Component
     public function saveGroup()
     {
 
+        // update
         if($this->updateMode){
-
             $Groups = Group::find($this->group_id);
             $total = 0;
             foreach ($this->GroupsItems as $groupItem) {
@@ -124,7 +125,7 @@ class CreateGroupServices extends Component
             // حفظ العلاقة
             $Groups->service_group()->detach();
             foreach ($this->GroupsItems as $GroupsItem) {
-                $Groups->service_group()->attach($GroupsItem['service_id']);
+                $Groups->service_group()->attach($GroupsItem['service_id'],['quantity' => $GroupsItem['quantity']]);
             }
 
             $this->ServiceSaved = false;
@@ -134,6 +135,7 @@ class CreateGroupServices extends Component
 
         else{
 
+            // insert
             $Groups = new Group();
             $total = 0;
 
@@ -157,13 +159,13 @@ class CreateGroupServices extends Component
             $Groups->save();
 
             // حفظ الترجمة
-            $Groups->name=$this->name_group;
-            $Groups->notes=$this->notes;
+            $Groups->name=  $this->name_group;
+            $Groups->notes= $this->notes;
             $Groups->save();
 
             // حفظ العلاقة
             foreach ($this->GroupsItems as $GroupsItem) {
-                $Groups->service_group()->attach($GroupsItem['service_id'],);
+                $Groups->service_group()->attach($GroupsItem['service_id'],['quantity' => $GroupsItem['quantity']]);
             }
 
             $this->reset('GroupsItems', 'name_group', 'notes');
@@ -176,12 +178,9 @@ class CreateGroupServices extends Component
 
     }
 
-
     public function show_form_add(){
-
         $this->show_table = false;
     }
-
 
     public function edit($id)
     {
@@ -191,8 +190,8 @@ class CreateGroupServices extends Component
         $this->group_id = $id;
 
         $this->reset('GroupsItems', 'name_group', 'notes');
-        $this->name_group= $group->name;
-        $this->notes= $group->notes;
+        $this->name_group=$group->name;
+        $this->notes=$group->notes;
 
         $this->discount_value = intval($group->discount_value);
         $this->ServiceSaved = false;
@@ -201,7 +200,7 @@ class CreateGroupServices extends Component
         {
             $this->GroupsItems[] = [
                 'service_id' => $serviceGroup->id,
-                'quantity' => 8,
+                'quantity' => $serviceGroup->pivot->quantity,
                 'is_saved' => true,
                 'service_name' => $serviceGroup->name,
                 'service_price' => $serviceGroup->price
@@ -209,12 +208,9 @@ class CreateGroupServices extends Component
         }
     }
 
-
     public function delete($id){
-
         Group::destroy($id);
         return redirect()->to('/Add_GroupServices');
-
     }
 
 }
