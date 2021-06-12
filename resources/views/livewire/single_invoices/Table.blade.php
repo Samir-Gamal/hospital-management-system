@@ -35,10 +35,13 @@
                 <td>{{ $single_invoice->type == 1 ? 'نقدي':'اجل' }}</td>
                 <td>
                     <button wire:click="edit({{ $single_invoice->id }})" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></button>
-                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteGroup{{$single_invoice->id}}"><i class="fa fa-trash"></i></button>
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete_invoice" wire:click="delete({{ $single_invoice->id }})" ><i class="fa fa-trash"></i></button>
                 </td>
             </tr>
 
         @endforeach
     </table>
+
+    @include('livewire.single_invoices.delete')
+
 </div>
