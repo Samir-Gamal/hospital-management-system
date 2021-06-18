@@ -46,7 +46,7 @@
 
                     <div class="col">
                         <label>نوع الفاتورة</label>
-                        <select wire:model="type" class="form-control">
+                        <select wire:model="type" class="form-control" {{$updateMode == true ? 'disabled':''}}>
                             <option value="" >-- اختار من القائمة --</option>
                             <option value="1">نقدي</option>
                             <option value="2">اجل</option>
