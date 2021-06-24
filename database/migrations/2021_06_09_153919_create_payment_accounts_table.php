@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateReceiptAccountsTable extends Migration
+class CreatePaymentAccountsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateReceiptAccountsTable extends Migration
      */
     public function up()
     {
-        Schema::create('receipt_accounts', function (Blueprint $table) {
+        Schema::create('payment_accounts', function (Blueprint $table) {
             $table->id();
             $table->date('date');
             $table->foreignId('patient_id')->references('id')->on('patients')->onDelete('cascade');
@@ -30,6 +30,6 @@ class CreateReceiptAccountsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('receipt_accounts');
+        Schema::dropIfExists('payment_accounts');
     }
 }

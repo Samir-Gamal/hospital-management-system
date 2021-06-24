@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\DoctorController;
 use App\Http\Controllers\Dashboard\InsuranceController;
 use App\Http\Controllers\Dashboard\PatientController;
+use App\Http\Controllers\Dashboard\PaymentAccountController;
 use App\Http\Controllers\Dashboard\ReceiptAccountController;
 use App\Http\Controllers\Dashboard\SectionController;
 use App\Http\Controllers\Dashboard\SingleServiceController;
@@ -113,6 +114,11 @@ Route::group(
 
         //############################# end Receipt route ######################################
 
+        //############################# Payment route ##########################################
+
+        Route::resource('Payment', PaymentAccountController::class);
+
+        //############################# end Payment route ######################################
 
 
     });
