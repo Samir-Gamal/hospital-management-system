@@ -17,7 +17,6 @@ class ReceiptRepository implements ReceiptRepositoryInterface
 
     public function index()
     {
-
         $receipts =  ReceiptAccount::all();
         return view('Dashboard.Receipt.index',compact('receipts'));
     }
@@ -26,6 +25,12 @@ class ReceiptRepository implements ReceiptRepositoryInterface
     {
         $Patients = Patient::all();
         return view('Dashboard.Receipt.add',compact('Patients'));
+    }
+
+    public function show($id)
+    {
+        $receipt = ReceiptAccount::findorfail($id);
+        return view('Dashboard.Receipt.print',compact('receipt'));
     }
 
     public function store($request)

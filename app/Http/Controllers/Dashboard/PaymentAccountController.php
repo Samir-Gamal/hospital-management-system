@@ -34,7 +34,7 @@ class PaymentAccountController extends Controller
 
     public function show($id)
     {
-        //
+        return $this->Payment->show($id);
     }
 
 

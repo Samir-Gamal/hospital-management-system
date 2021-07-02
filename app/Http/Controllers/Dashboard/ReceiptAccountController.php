@@ -35,7 +35,7 @@ class ReceiptAccountController extends Controller
 
     public function show($id)
     {
-        //
+        return $this->Receipt->show($id);
     }
 
 
