@@ -14,6 +14,8 @@ interface PatientRepositoryInterface
     public function store($request);
     // edit Patients
     public function edit($id);
+    // show Patients
+    public function show($id);
     // update Patients
     public function update($request);
     // Deleted Patients

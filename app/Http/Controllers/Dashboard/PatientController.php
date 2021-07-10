@@ -37,7 +37,7 @@ class PatientController extends Controller
 
     public function show($id)
     {
-        //
+        return $this->Patient->show($id);
     }
 
 
