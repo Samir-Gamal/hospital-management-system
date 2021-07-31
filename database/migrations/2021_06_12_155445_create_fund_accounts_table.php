@@ -16,10 +16,9 @@ class CreateFundAccountsTable extends Migration
         Schema::create('fund_accounts', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->foreignId('single_invoice_id')->nullable()->references('id')->on('single_invoices')->onDelete('cascade');
+            $table->foreignId('invoice_id')->nullable()->references('id')->on('invoices')->onDelete('cascade');
             $table->foreignId('receipt_id')->nullable()->references('id')->on('receipt_accounts')->onDelete('cascade');
             $table->foreignId('Payment_id')->nullable()->references('id')->on('payment_accounts')->onDelete('cascade');
-            $table->foreignId('group_invoice_id')->nullable()->references('id')->on('group_invoices')->onDelete('cascade');
             $table->decimal('Debit',8,2)->nullable();
             $table->decimal('credit',8,2)->nullable();
             $table->timestamps();
