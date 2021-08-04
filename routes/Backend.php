@@ -50,13 +50,6 @@ Route::group(
     //################################ end dashboard admin #####################################
 
 
-    //################################ dashboard doctor ########################################
-
-    Route::get('/dashboard/doctor', function () {
-        return view('Dashboard.doctor.dashboard');
-    })->middleware(['auth:doctor'])->name('dashboard.admin');
-
-    //################################ end dashboard doctor #####################################
 
 //---------------------------------------------------------------------------------------------------------------
 
@@ -139,10 +132,6 @@ Route::group(
         Route::view('group_Print_single_invoices','livewire.Group_invoices.print')->name('group_Print_single_invoices');
 
         //############################# end single_invoices route ######################################
-
-
-
-
 
     });
 
