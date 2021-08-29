@@ -39,9 +39,24 @@ Route::group(
 
         Route::prefix('doctor')->group(function () {
 
+
+            //############################# completed_invoices route ##########################################
+            Route::get('completed_invoices', [InvoiceController::class,'completedInvoices'])->name('completedInvoices');
+            //############################# end invoices route ################################################
+
+            //############################# review_invoices route ##########################################
+            Route::get('review_invoices', [InvoiceController::class,'reviewInvoices'])->name('reviewInvoices');
+            //############################# end invoices route #############################################
+
             //############################# invoices route ##########################################
             Route::resource('invoices', InvoiceController::class);
             //############################# end invoices route ######################################
+
+
+            //############################# review_invoices route ##########################################
+            Route::post('add_review', [DiagnosticController::class,'addReview'])->name('add_review');
+            //############################# end invoices route #############################################
+
 
             //############################# Diagnostics route ##########################################
 

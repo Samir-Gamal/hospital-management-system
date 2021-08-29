@@ -21,16 +21,19 @@ class DiagnosticController extends Controller
         //
     }
 
-
     public function create()
     {
         //
     }
 
-
     public function store(Request $request)
     {
         return $this->Diagnosis->store($request);
+    }
+
+    public function addReview (Request $request)
+    {
+        return $this->Diagnosis->addReview($request);
     }
 
 

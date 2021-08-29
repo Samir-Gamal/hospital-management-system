@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Invoice extends Model
 {
     use HasFactory;
+   // protected $guarded=[];
+    protected $fillable =['invoice_status'];
 
     public function Group()
     {
