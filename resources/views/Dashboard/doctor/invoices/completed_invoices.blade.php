@@ -57,7 +57,7 @@
                                                    <td>{{ $loop->iteration}}</td>
                                                    <td>{{ $invoice->invoice_date }}</td>
                                                    <td>{{ $invoice->Service->name ?? $invoice->Group->name }}</td>
-                                                   <td><a href="{{route('Diagnostics.show',$invoice->patient_id)}}">{{ $invoice->Patient->name }}</a></td>
+                                                   <td><a href="{{route('patient_details',$invoice->patient_id)}}">{{ $invoice->Patient->name }}</a></td>
                                                    <td>{{ number_format($invoice->price, 2) }}</td>
                                                    <td>{{ number_format($invoice->discount_value, 2) }}</td>
                                                    <td>{{ $invoice->tax_rate }}%</td>
