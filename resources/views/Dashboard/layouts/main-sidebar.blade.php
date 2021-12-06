@@ -74,20 +74,13 @@
                 <ul class="slide-menu">
                     <li><a class="slide-item" href="{{ route('Receipt.index') }}">سند قبض</a></li>
                     <li><a class="slide-item" href="{{ route('Payment.index') }}">سند صرف</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='mail-read') }}">Read-mail</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='mail-settings') }}">mail-settings</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='chat') }}">Chat</a></li>
                 </ul>
             </li>
             <li class="slide">
-                <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13 4H6v16h12V9h-5V4zm3 14H8v-2h8v2zm0-6v2H8v-2h8z" opacity=".3"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg><span class="side-menu__label">Forms</span><i class="angle fe fe-chevron-down"></i></a>
+                <a class="side-menu__item" data-toggle="slide" href="{{ url('/' . $page='#') }}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13 4H6v16h12V9h-5V4zm3 14H8v-2h8v2zm0-6v2H8v-2h8z" opacity=".3"/><path d="M8 16h8v2H8zm0-4h8v2H8zm6-10H6c-1.1 0-2 .9-2 2v16c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/></svg><span class="side-menu__label">الاشعة</span><i class="angle fe fe-chevron-down"></i></a>
                 <ul class="slide-menu">
-                    <li><a class="slide-item" href="{{ url('/' . $page='form-elements') }}">Form Elements</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='form-advanced') }}">Advanced Forms</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='form-layouts') }}">Form Layouts</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='form-validation') }}">Form Validation</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='form-wizards') }}">Form Wizards</a></li>
-                    <li><a class="slide-item" href="{{ url('/' . $page='form-editor') }}">WYSIWYG Editor</a></li>
+                    <li><a class="slide-item" href="{{ route('ray_employee.index') }}">قائمة الموظفين</a></li>
+                    <li><a class="slide-item" href="{{ url('/' . $page='form-advanced') }}">قائمة الكشوفات</a></li>
                 </ul>
             </li>
             <li class="slide">

@@ -303,8 +303,10 @@
                             <form method="POST" action="{{ route('logout.user') }}">
                             @elseif(auth('admin')->check())
                             <form method="POST" action="{{ route('logout.admin') }}">
-                            @else
+                            @elseif(auth('doctor')->check())
                             <form method="POST" action="{{ route('logout.doctor') }}">
+                            @else
+                             <form method="POST" action="{{ route('logout.ray_employee') }}">
                             @endif
                             @csrf
                                         <a class="dropdown-item" href="#"
