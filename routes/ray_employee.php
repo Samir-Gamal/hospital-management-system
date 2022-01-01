@@ -5,7 +5,7 @@ use App\Http\Controllers\Dashboard_Doctor\DiagnosticController;
 use App\Http\Controllers\Dashboard_Doctor\LaboratorieController;
 use App\Http\Controllers\Dashboard_Doctor\RayController;
 use App\Http\Controllers\Dashboard_Doctor\PatientDetailsController;
-use App\Http\Controllers\doctor\InvoiceController;
+use App\Http\Controllers\Dashboard_Ray_Employee\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,9 +32,16 @@ Route::group(
     Route::get('/dashboard/ray_employee', function () {
         return view('Dashboard.dashboard_RayEmployee.dashboard');
     })->middleware(['auth:ray_employee'])->name('dashboard.ray_employee');
-
-
     //################################ end dashboard doctor #####################################
+
+
+    //############################# invoices route ##########################################
+    Route::get('invoices', [InvoiceController::class,'index'])->name('invoices.index');
+    //############################# end invoices route ######################################
+
+
+
+
 
 //---------------------------------------------------------------------------------------------------------------
 
