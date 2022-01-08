@@ -36,7 +36,7 @@ Route::group(
 
 
     //############################# invoices route ##########################################
-    Route::get('invoices', [InvoiceController::class,'index'])->name('invoices.index');
+     Route::get('invoices', [InvoiceController::class,'index'])->name('invoices.index');
     //############################# end invoices route ######################################
 
 

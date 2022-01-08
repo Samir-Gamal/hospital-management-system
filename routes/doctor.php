@@ -5,6 +5,7 @@ use App\Http\Controllers\Dashboard_Doctor\DiagnosticController;
 use App\Http\Controllers\Dashboard_Doctor\LaboratorieController;
 use App\Http\Controllers\Dashboard_Doctor\RayController;
 use App\Http\Controllers\Dashboard_Doctor\PatientDetailsController;
+
 use App\Http\Controllers\doctor\InvoiceController;
 use Illuminate\Support\Facades\Route;
 
