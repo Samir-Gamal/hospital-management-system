@@ -34,12 +34,13 @@ Route::group(
     })->middleware(['auth:ray_employee'])->name('dashboard.ray_employee');
     //################################ end dashboard doctor #####################################
 
+    Route::middleware(['auth:ray_employee'])->group(function () {
 
     //############################# invoices route ##########################################
-     Route::get('invoices', [InvoiceController::class,'index'])->name('invoices.index');
+     Route::resource('invoices_ray_employee', InvoiceController::class);
     //############################# end invoices route ######################################
 
-
+    });
 
 
 
