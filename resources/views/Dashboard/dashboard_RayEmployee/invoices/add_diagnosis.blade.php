@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">المرفقات</label>
-                            <input type="file" name="photo" accept="image/*" multiple>
+                            <input type="file" name="photos[]" accept="image/*" multiple>
                         </div>
                         <button type="submit" class="btn btn-primary">تاكيد</button>
                     </form>

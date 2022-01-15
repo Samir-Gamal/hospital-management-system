@@ -13,11 +13,17 @@ class InvoicesRepository implements InvoicesRepositoryInterface
 
    public function index()
    {
-       $invoices = Ray::all();
+       $invoices = Ray::where('case',0)->get();
        return view('Dashboard.dashboard_RayEmployee.invoices.index',compact('invoices'));
    }
 
-   public function edit($id)
+   public function completed_invoices()
+   {
+       $invoices = Ray::where('case',1)->get();
+       return view('Dashboard.dashboard_RayEmployee.invoices.completed_invoices',compact('invoices'));
+   }
+
+    public function edit($id)
    {
        $invoice = Ray::findorFail($id);
        return view('Dashboard.dashboard_RayEmployee.invoices.add_diagnosis',compact('invoice'));
@@ -33,9 +39,15 @@ class InvoicesRepository implements InvoicesRepositoryInterface
            'case'=> 1,
        ]);
 
-       //Upload img
-       $this->verifyAndStoreImage($request,'photo','Rays','upload_image',auth()->user()->id,'App\Models\Ray');
 
+       if( $request->hasFile( 'photos' ) ) {
+
+         foreach ($request->photos as $photo) {
+             //Upload img
+             $this->verifyAndStoreImageForeach($photo,'Rays','upload_image',$invoice->id,'App\Models\Ray');
+         }
+
+       }
        session()->flash('edit');
        return redirect()->route('invoices_ray_employee.index');
 
