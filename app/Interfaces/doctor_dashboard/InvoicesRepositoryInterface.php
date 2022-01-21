@@ -12,4 +12,7 @@ interface InvoicesRepositoryInterface
 
     // Get completedInvoices Doctor
     public function completedInvoices();
+
+    // View rays
+    public function show($id);
 }
