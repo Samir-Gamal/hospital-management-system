@@ -19,7 +19,7 @@ class InvoicesRepository implements InvoicesRepositoryInterface
 
    public function completed_invoices()
    {
-       $invoices = Ray::where('case',1)->get();
+       $invoices = Ray::where('case',1)->where('employee_id',auth()->user()->id)->get();
        return view('Dashboard.dashboard_RayEmployee.invoices.completed_invoices',compact('invoices'));
    }
 
@@ -51,6 +51,16 @@ class InvoicesRepository implements InvoicesRepositoryInterface
        session()->flash('edit');
        return redirect()->route('invoices_ray_employee.index');
 
+   }
+
+   public function view_rays($id)
+   {
+       $rays = Ray::findorFail($id);
+       if($rays->employee_id !=auth()->user()->id){
+           //abort(404);
+           return redirect()->route('404');
+       }
+       return view('Dashboard.dashboard_RayEmployee.invoices.patient_details', compact('rays'));
    }
 
 }

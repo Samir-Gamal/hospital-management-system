@@ -133,9 +133,6 @@ Route::group(
 
         //############################# end RayEmployee route ######################################
 
-
-
-
         //############################# single_invoices route ##########################################
 
         Route::view('group_invoices','livewire.Group_invoices.index')->name('group_invoices');

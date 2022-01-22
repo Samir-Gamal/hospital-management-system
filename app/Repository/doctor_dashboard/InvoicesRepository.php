@@ -33,6 +33,11 @@ class InvoicesRepository implements InvoicesRepositoryInterface
     public function show($id)
     {
         $rays = Ray::findorFail($id);
+        if($rays->doctor_id !=auth()->user()->id){
+            //abort(404);
+            return redirect()->route('404');
+        }
+
         return view('Dashboard.Doctor.invoices.view_rays', compact('rays'));
     }
 }
