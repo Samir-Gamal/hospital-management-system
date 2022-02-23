@@ -4,6 +4,7 @@ use App\Http\Controllers\Dashboard\AmbulanceController;
 use App\Http\Controllers\Dashboard\DashboardController;
 use App\Http\Controllers\Dashboard\DoctorController;
 use App\Http\Controllers\Dashboard\InsuranceController;
+use App\Http\Controllers\Dashboard\LaboratorieEmployeeController;
 use App\Http\Controllers\Dashboard\PatientController;
 use App\Http\Controllers\Dashboard\PaymentAccountController;
 use App\Http\Controllers\Dashboard\RayEmployeeController;
@@ -132,6 +133,13 @@ Route::group(
         Route::resource('ray_employee', RayEmployeeController::class);
 
         //############################# end RayEmployee route ######################################
+
+
+        //############################# laboratorie_employee route ##########################################
+
+        Route::resource('laboratorie_employee', LaboratorieEmployeeController::class);
+
+        //############################# end laboratorie_employee route ######################################
 
         //############################# single_invoices route ##########################################
 

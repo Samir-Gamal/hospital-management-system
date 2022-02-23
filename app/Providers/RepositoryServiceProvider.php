@@ -11,6 +11,7 @@ use App\Interfaces\Doctors\DoctorRepositoryInterface;
 use App\Interfaces\Finance\PaymentRepositoryInterface;
 use App\Interfaces\Finance\ReceiptRepositoryInterface;
 use App\Interfaces\insurances\insuranceRepositoryInterface;
+use App\Interfaces\LaboratorieEmployee\LaboratorieEmployeeRepositoryInterface;
 use App\Interfaces\Patients\PatientRepositoryInterface;
 use App\Interfaces\RayEmployee\RayEmployeeRepositoryInterface;
 use App\Interfaces\Sections\SectionRepositoryInterface;
@@ -24,6 +25,7 @@ use App\Repository\Doctors\DoctorRepository;
 use App\Repository\Finance\PaymentRepository;
 use App\Repository\Finance\ReceiptRepository;
 use App\Repository\insurances\insuranceRepository;
+use App\Repository\LaboratorieEmployee\LaboratorieEmployeeRepository;
 use App\Repository\Patients\PatientRepository;
 use App\Repository\RayEmployee\RayEmployeeRepository;
 use App\Repository\Sections\SectionRepository;
@@ -49,6 +51,7 @@ class RepositoryServiceProvider extends ServiceProvider
         $this->app->bind(ReceiptRepositoryInterface::class, ReceiptRepository::class);
         $this->app->bind(PaymentRepositoryInterface::class, PaymentRepository::class);
         $this->app->bind(RayEmployeeRepositoryInterface::class, RayEmployeeRepository::class);
+        $this->app->bind(LaboratorieEmployeeRepositoryInterface::class, LaboratorieEmployeeRepository::class);
 
         // Dashboard_doctor
         $this->app->bind(InvoicesRepositoryInterface::class, InvoicesRepository::class);
