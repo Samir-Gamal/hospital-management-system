@@ -56,6 +56,11 @@ return [
             'provider' => 'ray_employees',
         ],
 
+        'laboratorie_employee' => [
+            'driver' => 'session',
+            'provider' => 'laboratorie_employees',
+        ],
+
 
         'api' => [
             'driver' => 'token',
@@ -100,6 +105,11 @@ return [
         'ray_employees' => [
             'driver' => 'eloquent',
             'model' => App\Models\RayEmployee::class,
+        ],
+
+        'laboratorie_employees' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\LaboratorieEmployee::class,
         ],
 
 
