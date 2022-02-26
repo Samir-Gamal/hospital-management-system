@@ -152,12 +152,21 @@
                                                             <td>{{$loop->iteration}}</td>
                                                             <td>{{$patient_Laboratorie->description}}</td>
                                                             <td>{{$patient_Laboratorie->doctor->name}}</td>
+
                                                             @if($patient_Laboratorie->doctor_id == auth()->user()->id)
-                                                                <td>
-                                                                    <a class="modal-effect btn btn-sm btn-primary" data-effect="effect-scale"  data-toggle="modal" href="#edit_laboratorie_conversion{{$patient_Laboratorie->id}}"><i class="fas fa-edit"></i></a>
-                                                                    <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"  data-toggle="modal" href="#deleted_laboratorie{{$patient_Laboratorie->id}}"><i class="las la-trash"></i></a>
-                                                                </td>
+                                                                @if($patient_Laboratorie->case == 0)
+                                                                    <td>
+                                                                        <a class="modal-effect btn btn-sm btn-primary" data-effect="effect-scale"  data-toggle="modal" href="#edit_xray_conversion{{$patient_Laboratorie->id}}"><i class="fas fa-edit"></i></a>
+                                                                        <a class="modal-effect btn btn-sm btn-danger" data-effect="effect-scale"  data-toggle="modal" href="#delete{{$patient_Laboratorie->id}}"><i class="las la-trash"></i></a>
+                                                                    </td>
+                                                                @else
+                                                                    <td>
+                                                                        <a class="modal-effect btn btn-sm btn-warning"  href="{{route('show.laboratorie',$patient_Laboratorie->id)}}"><i class="fas fa-binoculars"></i></a>
+                                                                    </td>
+
+                                                                @endif
                                                             @endif
+
                                                         </tr>
                                                         @include('Dashboard.doctor.invoices.edit_laboratorie_conversion')
                                                         @include('Dashboard.doctor.invoices.deleted_laboratorie')

@@ -15,4 +15,7 @@ interface InvoicesRepositoryInterface
 
     // View rays
     public function show($id);
+
+    // View Laboratories
+    public function showLaboratorie($id);
 }
