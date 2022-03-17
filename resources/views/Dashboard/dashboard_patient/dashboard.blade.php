@@ -37,6 +37,7 @@
 							<span id="compositeline" class="pt-1">5,9,5,6,4,12,18,14,10,15,12,5,8,5,12,5,12,10,16,12</span>
 						</div>
 					</div>
+
 					<div class="col-xl-6 col-lg-6 col-md-6 col-xm-12">
 						<div class="card overflow-hidden sales-card bg-danger-gradient">
 							<div class="pl-3 pt-3 pr-3 pb-2 pt-0">
@@ -46,7 +47,7 @@
 								<div class="pb-0 mt-0">
 									<div class="d-flex">
 										<div class="">
-											<h4 class="tx-20 font-weight-bold mb-1 text-white">{{App\Models\Ray::where('case',0)->count()}}</h4>
+											<h4 class="tx-20 font-weight-bold mb-1 text-white"><a style="color: white" href="{{route('payments.patient')}}">{{App\Models\PatientAccount::where('patient_id',auth()->user()->id)->sum('credit')}}</a> </h4>
 										</div>
 									</div>
 								</div>
@@ -56,6 +57,7 @@
 					</div>
 
 				</div>
+
 				<!-- row closed -->
 
                 <div class="row row-sm row-deck">
@@ -72,7 +74,6 @@
                                         <th>تاريخ الفاتورة</th>
                                         <th>اسم المريض</th>
                                         <th>اسم الطبيب</th>
-                                        <th>المطلوب</th>
                                         <th>حالة الفاتورة</th>
                                     </tr>
                                     </thead>
@@ -83,7 +84,6 @@
                                             <td class="tx-right tx-medium tx-inverse">{{$invoice->created_at}}</td>
                                             <td class="tx-right tx-medium tx-danger">{{$invoice->patient->name}}</td>
                                             <td class="tx-right tx-medium tx-inverse">{{$invoice->doctor->name}}</td>
-                                            <td class="tx-right tx-medium tx-danger">{{$invoice->description}}</td>
                                             <td class="tx-right tx-medium tx-inverse">
                                                 @if($invoice->case == 0)
                                                     <span class="badge badge-danger">تحت الاجراء</span>
