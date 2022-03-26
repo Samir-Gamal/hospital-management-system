@@ -29,5 +29,9 @@
 				@include('Dashboard.layouts.models')
             	@include('Dashboard.layouts.footer')
 				@include('Dashboard.layouts.footer-scripts')
+
+
+
+
 	</body>
 </html>
