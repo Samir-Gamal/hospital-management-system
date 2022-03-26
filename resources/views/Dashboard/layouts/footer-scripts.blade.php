@@ -52,8 +52,20 @@
 <script src="{{URL::asset('Dashboard/plugins/datatable/js/responsive.bootstrap4.min.js')}}"></script>
 <!--Internal  Datatable js -->
 <script src="{{URL::asset('Dashboard/js/table-data.js')}}"></script>
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
 
+<script>
+    // Enable pusher logging - don't include this in production
+    Pusher.logToConsole = true;
+    var pusher = new Pusher('575a24b342b94c92fd1d', {
+        cluster: 'mt1'
+    });
 
+    var channel = pusher.subscribe('my-channel');
+    channel.bind('App\\Events\\MyEvent', function(data) {
+        alert(JSON.stringify(data));
+    });
 
+</script>
 
 @livewireScripts

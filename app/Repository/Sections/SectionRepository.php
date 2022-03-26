@@ -1,6 +1,7 @@
 <?php
 namespace App\Repository\Sections;
 
+use App\Events\MyEvent;
 use App\Interfaces\Sections\SectionRepositoryInterface;
 use App\Models\Doctor;
 use App\Models\Section;
@@ -11,6 +12,7 @@ class SectionRepository implements SectionRepositoryInterface
     public function index()
     {
       $sections = Section::all();
+      event(new MyEvent('welcome',auth()->user()->name));
       return view('Dashboard.Sections.index',compact('sections'));
     }
 
