@@ -170,7 +170,8 @@ class SingleInvoices extends Component
 
                     $notifications = new Notification();
                     $notifications->username = $this->username;
-                    $notifications->message = "كشف جديد : ".$this->username;
+                    $patient = Patient::find($this->patient_id);
+                    $notifications->message = "كشف جديد : ".$patient->name;
                     $notifications->save();
 
 

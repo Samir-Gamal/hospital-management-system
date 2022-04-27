@@ -191,6 +191,22 @@
                             <p data-count="{{App\Models\Notification::CountNotification(auth()->user()->name)->count()}}" class="dropdown-title-text subtext mb-0 text-white op-6 pb-0 tx-12 notif-count">{{App\Models\Notification::CountNotification(auth()->user()->name)->count()}}</p>
                         </div>
                         <div class="main-notification-list Notification-scroll">
+
+                            <div class="new_message">
+                            <a class="d-flex p-3 border-bottom" href="#">
+                                <div class="notifyimg bg-pink">
+                                    <i class="la la-file-alt text-white"></i>
+                                </div>
+                                <div class="mr-3">
+                                    <h4 class="notification-label mb-1"></h4>
+                                    <div class="notification-subtext"></div>
+                                </div>
+                                <div class="mr-auto">
+                                    <i class="las la-angle-left text-left text-muted"></i>
+                                </div>
+                            </a>
+                            </div>
+
                             @foreach(App\Models\Notification::where('username',auth()->user()->name)->where('reader_status',0)->get() as $notification )
                             <a class="d-flex p-3 border-bottom" href="#">
                                 <div class="notifyimg bg-pink">
@@ -282,7 +298,10 @@
     var notificationsWrapper   = $('.dropdown-notifications');
     var notificationsCountElem = notificationsWrapper.find('p[data-count]');
     var notificationsCount  = parseInt(notificationsCountElem.data('count'));
-    var notifications = notificationsWrapper.find('h5.notification-label');
+
+    var notifications = notificationsWrapper.find('h4.notification-label');
+    var new_message = notificationsWrapper.find('.new_message');
+    new_message.hide();
 
     var pusher = new Pusher('575a24b342b94c92fd1d', {
         cluster: 'mt1'
@@ -290,11 +309,12 @@
 
     var channel = pusher.subscribe('create-invoice');
     channel.bind('App\\Events\\CreateInvoice', function(data) {
-        var existingNotifications = notifications.html();
+
         var newNotificationHtml = `
-<h5 class="notification-label mb-1">`+data.message+data.patient+`</h5>
-<div class="notification-subtext">`+data.created_at+`</div>`;
-        notifications.html(newNotificationHtml + existingNotifications);
+       <h4 class="notification-label mb-1">`+data.message+data.patient+`</h4>
+       <div class="notification-subtext">`+data.created_at+`</div>`;
+        new_message.show();
+        notifications.html(newNotificationHtml);
         notificationsCount += 1;
         notificationsCountElem.attr('data-count', notificationsCount);
         notificationsWrapper.find('.notif-count').text(notificationsCount);
