@@ -10,9 +10,9 @@ class Notification extends Model
     use HasFactory;
 
 
-    public function scopeCountNotification($query,$username)
+    public function scopeCountNotification($query,$user_id)
     {
-        $query->where('username',$username)->where('reader_status',0);
+        $query->where('user_id',$user_id)->where('reader_status',0);
     }
 
 }
