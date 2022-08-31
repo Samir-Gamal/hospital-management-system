@@ -1,7 +1,8 @@
-<div>
+<div wire:ignore>
     <div class="main-chat-list" id="ChatList">
         @foreach($conversations as $conversation)
-            <div class="media new">
+            <div class="media new"
+                 wire:click="chatUserSelected({{ $conversation }},'{{ $this->getUsers($conversation,$name='id')}}')">
                 <div class="media-body">
                     <div class="media-contact-name">
                         <span>{{$this->getUsers($conversation,$name='name')}}</span>
@@ -13,3 +14,4 @@
         @endforeach
     </div><!-- main-chat-list -->
 </div>
+
