@@ -15,12 +15,12 @@ class Chatlist extends Component
     public $auth_email;
     public $receviverUser;
     public $selected_conversation;
+    protected $listeners = ['chatUserSelected','refresh'=>'$refresh'];
 
     public function mount()
     {
         $this->auth_email = auth()->user()->email;
     }
-
 
      public function getUsers(Conversation $conversation ,$request){
 
@@ -48,7 +48,6 @@ class Chatlist extends Component
         }
 
            $this->emitTo('chat.send-message','updateMessage',$this->selected_conversation,$this->receviverUser);
-
      }
 
 
