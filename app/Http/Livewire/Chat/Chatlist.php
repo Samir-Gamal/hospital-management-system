@@ -47,7 +47,7 @@ class Chatlist extends Component
             $this->emitTo('chat.chatbox','load_conversationPatient', $this->selected_conversation, $this->receviverUser);
         }
 
-
+           $this->emitTo('chat.send-message','updateMessage',$this->selected_conversation,$this->receviverUser);
 
      }
 
