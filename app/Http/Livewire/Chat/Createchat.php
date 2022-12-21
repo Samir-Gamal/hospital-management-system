@@ -42,7 +42,7 @@ class Createchat extends Component
                 ]);
                 DB::commit();
                 $this->emitSelf('render');
-            } catch (\ Exception $e) {
+            } catch (\Exception $e) {
                 DB::rollBack();
             }
         } else {
