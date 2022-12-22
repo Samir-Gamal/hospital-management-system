@@ -3,9 +3,11 @@
 namespace App\Http\Livewire\Chat;
 
 use App\Events\MassageSent;
+use App\Events\MassageSent2;
 use App\Models\Conversation;
 use App\Models\Doctor;
 use App\Models\Message;
+use App\Models\Patient;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Broadcast;
 use Livewire\Component;
@@ -18,7 +20,7 @@ class SendMessage extends Component
     public $auth_email;
     public $sender;
     public $createdMessage;
-    protected $listeners = ['updateMessage','dispatchSentMassage'];
+    protected $listeners = ['updateMessage','dispatchSentMassage','updateMessage2'];
 
     public function mount()
     {
@@ -32,8 +34,13 @@ class SendMessage extends Component
         }
     }
 
-
     public function updateMessage(Conversation $conversation, Doctor $receiver)
+    {
+        $this->selected_conversation = $conversation;
+        $this->receviverUser = $receiver;
+    }
+
+    public function updateMessage2(Conversation $conversation, Patient $receiver)
     {
         $this->selected_conversation = $conversation;
         $this->receviverUser = $receiver;
@@ -60,12 +67,23 @@ class SendMessage extends Component
     }
     public function dispatchSentMassage()
     {
-        broadcast(new MassageSent(
-            $this->sender,
-            $this->createdMessage,
-            $this->selected_conversation,
-            $this->receviverUser
-        ));
+        if (Auth::guard('patient')->check()) {
+            broadcast(new MassageSent(
+                $this->sender,
+                $this->createdMessage,
+                $this->selected_conversation,
+                $this->receviverUser
+            ));
+        }
+        else{
+            broadcast(new MassageSent2(
+                $this->sender,
+                $this->createdMessage,
+                $this->selected_conversation,
+                $this->receviverUser
+            ));
+        }
+
     }
 
     function render()
