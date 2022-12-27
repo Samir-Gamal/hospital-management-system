@@ -1,0 +1,196 @@
+/*** 
+
+====================================================================
+	Color Palate Style / Color Switcher Style
+====================================================================
+
+***/
+
+.color-palate {
+    background: #fff none repeat scroll 0 0;
+	-webkit-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+	-ms-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+	-o-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: -285px;
+    text-align: center;
+    top: 16%;
+    transition: all 0.5s ease 0s;
+    width: 285px;
+    z-index: 999;
+}
+
+.color-palate-head {
+    background: #004cda none repeat scroll 0 0;
+    padding: 12px 0;
+}
+
+.color-palate-head h6,
+.secondary-head h6 {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0px;
+    margin-top: 4px;
+	text-transform:uppercase;
+}
+
+.palate {
+    background: red none repeat scroll 0 0;
+    display: block;
+    float: left;
+    height: 45px;
+    margin: 0 2.5% 12px;
+    width: 20%;
+    cursor: pointer;
+    position: relative;
+}
+
+.colors-list .active::after{
+    background: url(../images/icons/tick.png) center center no-repeat !important;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.various-color {
+    overflow: hidden;
+    padding: 25px 0 15px;
+}
+
+.colors-list {
+    margin: 0 20px;
+}
+
+.secondary-head {
+    background: #222222 none repeat scroll 0 0;
+    padding: 14px 0;
+}
+
+.secondary-color {
+    padding: 23px 0;
+}
+
+.secondary-colors-list {
+    margin: 0 80px;
+}
+
+.palate-foo {
+    color: #777777;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 0px 30px 20px;
+	line-height:1.8em;
+	margin-top:16px;
+}
+
+.palate-foo span{
+	display:block;
+	padding-top:20px;
+	margin-top:5px;
+	border-top:1px dotted #b2b2b2;
+}
+
+.palate.default-color {
+    background: #004cda none repeat scroll 0 0;
+}
+
+.palate.green-color {
+    background: #2ECC40 none repeat scroll 0 0;
+}
+
+.palate.blue-color {
+    background: #0074D9 none repeat scroll 0 0;
+}
+
+.palate.brown-color {
+    background: #ab8b40 none repeat scroll 0 0;
+}
+
+.palate.purple-color {
+    background: #bb54e1 none repeat scroll 0 0;
+}
+
+.palate.teal-color {
+    background: #14c599 none repeat scroll 0 0;
+}
+
+.palate.orange-color {
+    background: #ff7e00 none repeat scroll 0 0;
+}
+
+.palate.yellow-color {
+    background: #fab82c none repeat scroll 0 0;
+}
+
+.palate.olive-color {
+    background: #3D9970 none repeat scroll 0 0;
+}
+
+.palate.lightblue-color {
+    background: #13b5ea none repeat scroll 0 0;
+}
+
+.palate.pink-color{
+    background: #ff017e none repeat scroll 0 0;
+}
+
+.palate.hotpink-color{
+    background: #96053e none repeat scroll 0 0;
+}
+
+.palate.redd-color{
+    background: #ff0000 none repeat scroll 0 0;
+}
+
+.color-trigger {
+    background: #004cda none repeat scroll 0 0;
+    cursor: pointer;
+    height: 50px;
+    right: -46px;
+    position: absolute;
+    top: 0;
+    width: 46px;
+    padding-top: 6px;
+}
+.color-trigger .fa{
+	/*-webkit-animation: rotating 2s linear infinite;
+   	animation: rotating 2s linear infinite;*/
+}
+.color-trigger:before{
+	content:'';
+	position:absolute;
+	left:0px;
+	top:0px;
+	width:100%;
+	height:100%;
+}
+
+.color-trigger i {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.color-palate.visible-palate {
+    left: 0px;
+}
+
+/* .color-trigger .fa {
+	-webkit-animation: rotation 2s infinite linear;
+}
+
+@-webkit-keyframes rotation {
+	from {
+			-webkit-transform: rotate(0deg);
+	}
+	to {
+			-webkit-transform: rotate(359deg);
+	}
+} */

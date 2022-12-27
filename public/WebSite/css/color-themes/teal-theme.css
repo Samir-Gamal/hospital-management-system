@@ -1,0 +1,313 @@
+@charset "utf-8";
+/* CSS Document */
+
+a,
+.theme_color,
+.main-slider .content h2,
+.main-slider .swiper-button-next,
+.main-menu .navigation > li:hover > a,
+.main-menu .navigation > li.current > a,
+.main-header .outer-box .search-box-btn .icon,
+.main-slider .swiper-button-next:before,
+.departments-info-tabs .departments-tabs .tabs-content .content-column .inner-column .bold-text,
+.departments-info-tabs .departments-tabs .tab-btns .tab-btn.active-btn .icon,
+.departments-info-tabs .departments-tabs .tab-btns .tab-btn:hover .icon,
+.departments-info-tabs .departments-tabs .tab-btns .tab-btn,
+.appointment-form-two .form-group label,
+.fact-counter-two .column .inner .count-outer,
+.about-section-two .content-column .about-list-info .list-inner,
+.appointment-section-three .content-column .appointment-list h4,
+.service-block-four .inner-box .appointment-btn:hover,
+.service-block-five .inner-box .icon-box,
+.main-slider .swiper-button-prev:before,
+.list-style-one li .icon,
+.doctor-info .name a,
+.service-block-two .inner-box h3 a:hover,
+.service-block .inner-box h3 a:hover,
+.main-slider-three .content-column .btn-box .services-btn:hover,
+.team-block .inner-box:hover .lower-content h3 a,
+.department-block .inner-box .read-outer .read-more,
+.main-slider-three .content-column .btn-box .appointment-btn,
+.testimonial-section .owl-nav .owl-prev:hover,
+.news-block .inner-box .lower-content h3 a:hover,
+.news-block .inner-box .lower-content .read-more,
+.main-footer .footer-list li a:hover,
+.news-widget-block .widget-inner h3 a:hover,
+.main-footer .contact-list li .icon,
+.nav-outer .mobile-nav-toggler .icon,
+.mobile-menu .navigation li.current > a, .mobile-menu .navigation li > a:hover,
+.search-popup .recent-searches li a:hover,
+.main-menu .navigation > li > ul > li > ul > li:hover > a,
+.main-menu .navigation > li > ul > li:hover > a,
+.testimonial-section .client-thumb-outer .author-info .author-name,
+.testimonial-section .owl-nav .owl-next:hover,
+.main-header .info-box .icon-box,
+.doctor-info .timing i,
+.header-style-three .social-box li a,
+.default-section .timeline-column .timeline-list li span,
+.doctor-info .social-links li a:hover,
+.department-section-three .department-tabs .tabs-content h3,
+.main-slider-two .content-column .inner-column h2,
+.sticky-header .main-menu .navigation > li:hover > a,
+.department-block-two .inner-box .lower-content .read-more,
+.price-block .inner-box .upper-box .price,
+.feature-block .inner-box .upper-box h3 a:hover,
+.feature-block .inner-box .upper-box .icon,
+.time-counter .time-countdown .counter-column .count,
+.doctor-detail .info-header .designation,
+.timetable ul li span,
+.need-help h3,
+.need-help ul li i,
+.department-detail h5,
+.price-feature h3,
+.popular-posts .post:hover h3 a,
+.categories-blog ul li.active a, .categories-blog ul li a:hover,
+.brochure-widget .brouchers li a:hover,
+.testimonial-section-two .owl-nav .owl-prev:hover,
+.testimonial-section-two .owl-nav .owl-next:hover,
+.styled-pagination li.prev a:hover, .styled-pagination li.next a:hover,
+.news-block-two .inner-box .lower-content .post-info li span,
+.welcome-section .image-column .inner-column .icon-outer .icon-inner,
+.welcome-section .content-column .inner-column .play-btn:hover .icon,
+.sticky-header .main-menu .navigation > li.current > a,
+.news-block-two .inner-box:hover .lower-content .theme-btn,
+.sticky-header .main-menu .navigation > li.current-menu-item > a,
+.faq-page-section .faq-tabs .tab-btns .tab-btn:hover,
+.faq-page-section .faq-tabs .tab-btns .tab-btn.active-btn,
+.portfolio-page-section .filters .filter.active,
+.gallery-item .overlay-inner .link:hover,
+.news-detail .inner-box .lower-content .post-info li span,
+.news-detail .post-share-options .social-icon li a:hover,
+.news-detail .post-share-options .tags a:hover,
+.new-posts .grid-icon,
+.new-posts a:hover,
+.cart-section .totals-table .total .price,
+.doctor-block-two .inner-block .quote-icon,
+.product-block .inner-box .lower-box .content .price,
+.product-block .inner-box .lower-box .content h3 a:hover,
+.sidebar .related-posts .post .rating .fa,
+.sidebar .archive-list li a .pull-right,
+.contact-map-section .map-content .info-list li .icon,
+.product-details .basic-details .details-header .rating,
+.product-details .basic-details .details-header .item-price,
+.sidebar .related-posts .post a, .sidebar .related-posts .post a:hover,
+.sidebar-page-container .comments-area .comment-box strong,
+.doctor-block-two .inner-block .social-icon li a:hover,
+.shop-comment-form .rating-box .rating a:hover,
+.order-box ul li span,
+.news-detail .inner-box .lower-content .text blockquote .quote-box .icon,
+.portfolio-page-section .filters .filter:hover{
+	color:#39CCCC;
+}
+
+/*Background Color*/
+
+.btn-style-two,
+.phone-btn:hover .icon,
+.scroll-to-top:hover,
+.sec-title .separator:after,
+.main-header .header-top,
+.counter-section,
+.service-block-six .inner-box .border-one:after,
+.service-block-six .inner-box .border-one:before,
+.service-block-six .inner-box .border-two:before,
+.service-block-six .inner-box .border-two:after,
+.service-block-four .inner-box,
+.service-block-four:nth-child(2) .inner-box,
+.service-block-four:nth-child(3) .inner-box,
+.appointment-section-three .form-column .upper-box .upper-inner,
+.doctor-info-tabs .doctor-tabs .tab-btns .tab-btn:hover,
+.doctor-info-tabs .doctor-tabs .tab-btns .tab-btn.active-btn,
+.hospital-info-tabs .hospital-tabs .tab-btns .tab-btn:hover,
+.hospital-info-tabs .hospital-tabs .tab-btns .tab-btn.active-btn,
+.hospital-info-tabs .hospital-tabs .tabs-content .more-btn:hover,
+.schedule-section .appointment-column .inner-column .upper-box .upper-inner,
+.provider-section .appointment-column .inner-column .upper-box .upper-inner,
+.main-footer .logo-widget .social-icons li a:hover,
+.team-block .inner-box .image,
+.department-block .inner-box:before,
+.main-footer .footer-bottom,
+.doctor-block .inner-box:hover,
+.news-block .inner-box .image .category,
+.welcome-section .content-column .inner-column .play-btn .icon,
+.welcome-section .content-column .inner-column .play-btn:hover,
+.news-block .inner-box .image a:before,
+.main-header.header-style-two .header-lower,
+.main-slider-two .swiper-button-next,
+.main-slider-three,
+.video-section:before,
+.btn-style-five,
+.other-options .cart-option a:hover,
+.main-footer.style-two,
+.blog-cat li a:before,
+.tag-list li a:hover,
+.sidebar-title .separator:before,
+.main-slider-three .image-column .image:before,
+.doctors-tabs .doctors-thumb .image-box:before,
+.price-block .inner-box:hover .appointment,
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill,
+.main-footer .footer-widget .footer-title .separator:after,
+.team-block .inner-box .image .overlay-box:before,
+.default-section .timeline-column .btn-box .timeline-btn,
+.services-section .circles-column .circles .circle-two:before,
+.department-block .inner-box:hover .read-outer .read-more,
+.search-popup .search-form fieldset input[type="submit"],
+.main-slider .swiper-button-next:hover, .main-slider .swiper-button-prev:hover,
+.search-popup .search-form fieldset input[type="submit"]:hover,
+.service-block-three .inner-box:hover .border-one:before,
+.service-block-three .inner-box:hover .border-one:after,
+.service-block-three .inner-box:before,
+.testimonial-block-two .inner-box .lower-box .quote-icon,
+.service-block-three .inner-box:hover .border-two:before,
+.service-block-three .inner-box:hover .border-two:after,
+.health-section .content-column .border-line:after,
+.health-section .content-column .border-line:before,
+.news-block-two .inner-box:hover::before,
+.styled-pagination li.next a:hover,
+.styled-pagination li.prev a:hover,
+.styled-pagination li a:hover,
+.styled-pagination li.active a,
+.sidebar .search-box .form-group button,
+.news-detail .inner-box:before,
+.cart-section .coupon-btn,
+.cart-section .cart-options .cart-btn,
+.cart-section .totals-table .proceed-btn,
+.ui-state-active, .ui-widget-content .ui-state-active,
+.schedule-section .schedule-column .inner-column .title-box li,
+.payment-box .payment-options li .radio-option label .small-text,
+.product-block .inner-box .image .options li:last-child a,
+.shop-single .product-details .prod-tabs .tab-btns .tab-btn:hover,
+.shop-single .product-details .prod-tabs .tab-btns .tab-btn.active-btn,
+.range-slider-one .ui-state-default, .range-slider-one .ui-widget-content .ui-state-default,
+.comming-soon .emailed-form .form-group input[type="submit"], .comming-soon .emailed-form button,
+.department-section .owl-dots .owl-dot.active, .department-section .owl-dots .owl-dot:hover,
+.main-slider .swiper-pagination-progressbar .swiper-pagination-progressbar-fill{
+	background-color:#39CCCC;
+}
+
+.page-title:before,
+.department-section-two:before{
+	background-image: -ms-linear-gradient(left, #39CCCC 0%, #009dcd 100%);
+	background-image: -moz-linear-gradient(left, #39CCCC 0%, #009dcd 100%);
+	background-image: -o-linear-gradient(left, #39CCCC 0%, #009dcd 100%);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #39CCCC), color-stop(100, #009dcd));
+	background-image: -webkit-linear-gradient(left, #39CCCC 0%, #009dcd 100%);
+	background-image: linear-gradient(to right, #39CCCC 0%, #009dcd 100%);
+}
+
+.btn-style-one:before,
+.btn-style-one:after{
+	border-bottom-color:#39CCCC;
+}
+
+.departments-info-tabs .departments-tabs .tab-btns .tab-btn:hover,
+.departments-info-tabs .departments-tabs .tab-btns .tab-btn.active-btn{
+	border-bottom-color:#39CCCC;
+}
+
+.departments-info-tabs .departments-tabs .tab-btns .tab-btn:before{
+	border-top-color:#39CCCC;
+}
+
+/*Border Color*/
+.btn-style-one:hover,
+.btn-style-one,
+.tag-list li a:hover,
+.service-block-six .inner-box:hover .icon-box,
+.appointment-form-two .form-group input:focus,
+.appointment-form-two .form-group select:focus,
+.appointment-form-two .form-group textarea:focus,
+.ui-state-active, .ui-widget-content .ui-state-active,
+.department-block .inner-box:hover,
+.main-slider .swiper-button-prev,
+.main-slider .swiper-button-next,
+.search-popup .recent-searches li a:hover,
+.main-menu .navigation > li > ul > li > a:after,
+.main-footer .logo-widget .social-icons li a:hover,
+.news-block .inner-box .lower-content .read-more,
+.testimonial-section .owl-nav .owl-prev:hover,
+.testimonial-section .owl-nav .owl-next:hover,
+.department-section-two .sec-title .separator:after,
+.appointment-form .form-group input:focus,
+.appointment-form .form-group select:focus,
+.appointment-form .form-group textarea:focus,
+.health-section .content-column .border-line,
+.department-section-three .sec-title .separator:after,
+.testimonial-section-two .owl-nav .owl-prev:hover,
+.testimonial-section-two .owl-nav .owl-next:hover,
+.sidebar .search-box .form-group input[type="text"],
+.sidebar .search-box .form-group input[type="search"],
+.welcome-section .content-column .inner-column .play-btn:hover,
+.services-section .circles-column .circles .circle-one:before,
+.comment-form .form-group input[type="text"]:focus,
+.comment-form .form-group input[type="password"]:focus,
+.comment-form .form-group input[type="tel"]:focus,
+.comment-form .form-group input[type="email"]:focus,
+.comment-form .form-group select:focus,
+.comment-form .form-group textarea:focus,
+.cart-section .cart-options .cart-btn,
+.shop-comment-form .form-group input[type="text"]:focus,
+.shop-comment-form .form-group input[type="password"]:focus,
+.shop-comment-form .form-group input[type="tel"]:focus,
+.shop-comment-form .form-group input[type="email"]:focus,
+.shop-comment-form .form-group select:focus,
+.shop-comment-form .form-group textarea:focus,
+.shipping-form .form-group input[type="text"]:focus,
+.shipping-form .form-group input[type="password"]:focus,
+.shipping-form .form-group input[type="tel"]:focus,
+.shipping-form .form-group input[type="email"]:focus,
+.shipping-form .form-group select:focus,
+.shipping-form .form-group textarea:focus,
+.login-form .form-group input[type="text"]:focus,
+.login-form .form-group input[type="password"]:focus,
+.login-form .form-group input[type="tel"]:focus,
+.login-form .form-group input[type="email"]:focus,
+.login-form .form-group select:focus,
+.coupon-form .form-group input[type="text"]:focus,
+.checkout-form input:focus,
+.checkout-form select:focus,
+.checkout-form textarea:focus,
+.login-form .form-group textarea:focus{
+	border-color:#39CCCC;
+}
+
+.payment-box .payment-options li .radio-option label .small-text:before{
+	border-bottom-color:#39CCCC;
+}
+
+/*RGBA Color Light*/
+
+.gallery-item .overlay-box,
+.department-section-three .image-layer:before,
+.gallery-block .overlay-box{
+	background-color:rgba(57,204,204,0.80);
+}
+
+/*RGBA Color Dark*/
+
+@media only screen and (max-width: 767px){
+	
+	.main-menu .navbar-header .navbar-toggle{
+		border-color:#ffffff;
+	}
+	
+	.main-menu .navbar-header .navbar-toggle,
+	.main-menu .navbar-collapse > .navigation,
+	.main-menu .navbar-collapse > .navigation > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul,
+	.main-menu .navbar-collapse > .navigation > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li > a,
+	.main-menu .navbar-collapse > .navigation > li > a:hover,
+	.main-menu .navbar-collapse > .navigation > li > a:active,
+	.main-menu .navbar-collapse > .navigation > li > a:focus,
+	.main-menu .navbar-collapse > .navigation > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li > ul > li > ul > li:hover > a,
+	.main-menu .navbar-collapse > .navigation > li.current > a,
+	.main-menu .navbar-collapse > .navigation > li.current-menu-item > a,
+	.header-style-two.inner-header .main-menu .navigation > li > a{
+		background-color:#39CCCC;
+	}
+	
+}
