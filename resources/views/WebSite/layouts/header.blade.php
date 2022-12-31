@@ -104,6 +104,18 @@
                 </li>
 
                 <li><a href="contact.html">تواصل معانا</a></li>
+
+                <li class="dropdown"><a href="#">{{ LaravelLocalization::getCurrentLocaleNative() }}</a>
+                    <ul>
+                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                            <li>
+                                <a rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ $properties['native'] }}
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </li>
             </ul>
         </div>
 
@@ -120,10 +132,12 @@
         <!-- Social Box -->
         <ul class="social-box clearfix">
             <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-            <li><a href="#"><span class="fab fa-google"></span></a></li>
             <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-            <li><a href="#"><span class="fab fa-skype"></span></a></li>
             <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+            <li><a title="تسجيل دخول" href="{{route('dashboard.user')}}"><span class="fas fa-user"></span></a>
+            </li>
+
+
         </ul>
 
         <!-- Search Btn -->
