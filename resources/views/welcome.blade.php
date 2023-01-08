@@ -561,48 +561,7 @@
 
                             <!-- Appointment Form -->
                             <div class="appointment-form">
-                                <form method="post" action="appointment.html">
-                                    <div class="row clearfix">
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="username" placeholder="اسمك" required="">
-                                            <span class="icon fa fa-user"></span>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="email" name="email" placeholder="البريد الالكتروني" required="">
-                                            <span class="icon fa fa-envelope"></span>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="tel" name="phone" placeholder="رقم الهاتف" required="">
-                                            <span class="icon fas fa-phone"></span>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="department" placeholder="Department" required="">
-                                            <span class="icon fas fa-home"></span>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="day" placeholder="Day">
-                                            <span class="icon fa fa-calendar"></span>
-                                        </div>
-
-                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
-                                            <input type="text" name="time" placeholder="Time" class="">
-                                            <span class="icon far fa-clock"></span>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <textarea name="message" placeholder="Message"></textarea>
-                                        </div>
-
-                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
-                                            <button class="theme-btn btn-style-two" type="submit" name="submit-form">
-                                                <span class="txt">تاكيد</span></button>
-                                        </div>
-                                    </div>
-                                </form>
+                                <livewire:appointments.create/>
                             </div>
 
                         </div>

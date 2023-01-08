@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     @include('WebSite.layouts.style')
+    @livewireStyles
 </head>
 
 <body>
@@ -196,6 +197,6 @@
 </div>
 
 @include('WebSite.layouts.scripts')
-
+@livewireScripts
 </body>
 </html>
