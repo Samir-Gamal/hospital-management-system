@@ -6,7 +6,7 @@
     @livewireStyles
 </head>
 
-<body>
+<body style="font-family: 'Cairo', sans-serif;">
 
 <div class="page-wrapper {{ LaravelLocalization::getCurrentLocale() ==='ar' ? 'rtl': ''}}">
     <!-- Preloader -->

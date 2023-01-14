@@ -57,11 +57,12 @@
                                                 data-target="#approval{{$appointment->id}}"><i class="fas fa-check"></i>
                                         </button>
                                         <button class="btn btn-sm btn-danger" data-toggle="modal"
-                                                data-target="#Refusal{{$appointment->id}}"><i class="fas fa-remove-format"></i>
+                                                data-target="#Deleted{{$appointment->id}}"><i class="fas fa-remove-format"></i>
                                         </button>
                                     </td>
                                 </tr>
-                                 @include('Dashboard.appointments.approval')
+                                @include('Dashboard.appointments.approval')
+                                @include('Dashboard.appointments.delete')
                             @endforeach
                             </tbody>
                         </table>

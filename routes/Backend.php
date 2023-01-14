@@ -155,6 +155,7 @@ Route::group(
         Route::get('appointments',[AppointmentController::class,'index'])->name('appointments.index');
         Route::put('appointments/approval/{id}',[AppointmentController::class,'approval'])->name('appointments.approval');
         Route::get('appointments/approval',[AppointmentController::class,'index2'])->name('appointments.index2');
+        Route::delete('appointments/destroy/{id}',[AppointmentController::class,'destroy'])->name('appointments.destroy');
 
 
     });

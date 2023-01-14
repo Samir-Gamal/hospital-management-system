@@ -17,7 +17,9 @@ class Create extends Component
     public $email;
     public $phone;
     public $notes;
+    public $appointment_patient;
     public $message= false;
+    public $message2= false;
 
     public function mount(){
 
@@ -41,12 +43,23 @@ class Create extends Component
 
     public function store(){
 
+        //chek number_of_statements
+
+        $appointment_count = Appointment::where('doctor_id', $this->doctor)->where('type', 'غير مؤكد')->where('appointment_patient', $this->appointment_patient)->count();
+        $doctor_info = Doctor::find($this->doctor);
+
+        if ($appointment_count == $doctor_info->number_of_statements) {
+            $this->message2 = true;
+            return back();
+        }
+
         $appointments = new Appointment();
         $appointments->doctor_id = $this->doctor;
         $appointments->section_id = $this->section;
         $appointments->name = $this->name;
         $appointments->email = $this->email;
         $appointments->phone = $this->phone;
+        $appointments->appointment_patient = $this->appointment_patient;
         $appointments->notes = $this->notes;
         $appointments->save();
         $this->message =true;

@@ -5,6 +5,14 @@
             location.reload()
         </script>
     @endif
+
+    @if($message2 === true)
+        <script>
+            alert('لا توجد مواعيد لهذا اليوم برجاء اختيار يوم اخر')
+            location.reload()
+        </script>
+    @endif
+
     <form wire:submit.prevent="store">
         <div class="row clearfix">
             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
@@ -26,7 +34,6 @@
                 </select>
             </div>
 
-
             <div class="col-lg-6 col-md-6 col-sm-12 form-group">
                 <label for="exampleFormControlSelect1">القسم</label>
                 <select class="form-select" name="section" wire:model="section" id="exampleFormControlSelect1">
@@ -41,6 +48,12 @@
             <div class="col-lg-12 col-md-6 col-sm-12 form-group">
                 <input type="tel" name="phone" wire:model="phone" placeholder="رقم الهاتف" required="">
                 <span class="icon fas fa-phone"></span>
+            </div>
+
+            <div class="col-lg-12 col-md-6 col-sm-12 form-group">
+                <label for="exampleFormControlSelect1">تاريخ الموعد</label>
+                <input type="date" name="appointment_patient" wire:model="appointment_patient" required
+                       class="form-control">
             </div>
 
 
