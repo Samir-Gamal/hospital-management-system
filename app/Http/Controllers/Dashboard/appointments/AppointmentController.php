@@ -3,8 +3,10 @@
 namespace App\Http\Controllers\Dashboard\appointments;
 
 use App\Http\Controllers\Controller;
+use App\Mail\AppointmentConfirmation;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class AppointmentController extends Controller
 {
@@ -26,6 +28,8 @@ class AppointmentController extends Controller
             'type'=>'مؤكد',
             'appointment'=>$request->appointment
         ]);
+        Mail::to($appointment->email)->send(new AppointmentConfirmation($appointment->name,$appointment->appointment));
+
         session()->flash('add');
         return back();
     }
